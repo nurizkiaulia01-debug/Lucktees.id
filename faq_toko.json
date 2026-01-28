@@ -1,0 +1,63 @@
+[
+  {
+    "tag": "salam",
+    "keywords": ["hai", "halo", "hello"],
+    "answer": "Halo 👋 Selamat datang di Lucktees.id. Ada yang bisa kami bantu?"
+  },
+  {
+    "tag": "jam_operasional",
+    "keywords": ["jam buka", "jam operasional", "buka jam berapa", "sampai jam berapa", "tutup jam berapa"],
+    "answer": "Toko Lucktees.id buka setiap hari dari jam 08.00 sampai jam 17.00 WIB."
+  },
+  {
+    "tag": "alamat",
+    "keywords": ["alamat", "lokasi", "di mana", "dimana", "maps", "margadana"],
+    "answer": "Alamat Lucktees.id: Jl. Raya Banjaran Balamoa, Desa Pecabean, Kec. Pangkah, Kab. Tegal."
+  },
+  {
+    "tag": "cara_order",
+    "keywords": ["cara order", "cara pesan", "beli bagaimana", "order dimana", "order lewat apa", "pesan lewat apa"],
+    "answer": "Cara order di Lucktees.id:\n• Instagram\n• Tiktok\n• Facebook\n• WhatsApp: 0882003848423\n• Datang langsung ke alamat kami di Jl. Raya Banjaran Balamoa, Desa Pecabean, Kec. Pangkah, Kab. Tegal."
+  },
+  {
+    "tag": "produk",
+    "keywords": ["produk", "jual apa saja", "produk apa saja", "barang apa saja", "konveksi", "sablon", "aksesoris"],
+    "answer": "Lucktees.id menyediakan kaos, kemeja, jaket, slempang, setelan olahraga, workshirt, seragam sekolah, jersey printing dan lainnya."
+  },
+  {
+    "tag": "bahan_produk",
+    "keywords": ["bahan apa", "bahan baju", "bahannya apa", "terbuat dari apa"],
+    "answer": "Sablon dan konveksi di Lucktees.id menggunakan bahan pilihan yang adem, ringan, dan nyaman digunakan dalam aktivitas sehari-hari."
+  },
+  {
+    "tag": "model_produk",
+    "keywords": ["model ya apa saja", "model terbaru", "model kekinian","update model"],
+    "answer": "Model produk Lucktees.id:Kami selalu menyediakan model baju terbaru yang mengikuti tren, cocok untuk kegiatan harian maupun acara formal."
+  },
+  {
+    "tag": "stok_produk",
+    "keywords": ["stok ada", "masih tersedia", "ready stock", "habis atau tidak"],
+    "answer": "Stok produk di Lucktees.id:Sebagian besar produk kami tersedia ready stock, namun untuk warna atau model tertentu bisa saja terbatas."
+  },
+  {
+    "tag": "metode_pembayaran",
+    "keywords": ["pembayaran", "bayar apa saja", "metode pembayaran", "transfer", "cash"],
+    "answer": "metode pembayaran Lucktees.id:Kami menerima pembayaran tunai, transfer bank, QRIS, dan e-wallet."
+  },
+  {
+    "tag": "pengiriman",
+    "keywords": ["pengiriman", "ongkir", "kirim", "delivery", "kurir"],
+    "answer": "proses pengiriman Lucktees.id:Pengiriman dilakukan melalui kurir lokal."
+  },
+  {
+     "tag": "rekomendasi_produk",
+    "keywords": ["rekomendasi", "saran bahan", "saran tema sablon", "pilih yang mana", "yang bagus apa"],
+    "answer": "Rekomendasi di Lucktees.id:Jika masih bingung memilih, kami siap memberikan rekomendasi baju terbaik sesuai kebutuhan dan aktivitas Anda."
+  },
+  {
+    "tag" :"kata kasar",
+    "keywords":["anjing", "bangsat", "penipu", "bodoh"],
+    "answer" : "Maaf saya tidak suka mendengar kata-kata seperti itu, mohon gunakan bahasa yang sopan yah "
+  }
+
+]
