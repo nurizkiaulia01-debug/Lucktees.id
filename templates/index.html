@@ -129,55 +129,28 @@
   </div>
 
   <script>
-    const chatMessages = document.getElementById("chatMessages");
-    const userInput = document.getElementById("userInput");
+  const API_URL = window.location.origin + "/chat";
 
-    userInput.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        sendMessage();
-      }
-    });
+  function sendMessage() {
+    const message = userInput.value.trim();
+    if (!message) return;
 
-    function addMessage(text, sender) {
-      const msg = document.createElement("div");
-      msg.className = "message " + sender;
-      msg.textContent = text;
-      chatMessages.appendChild(msg);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
+    addMessage(message, "user");
+    userInput.value = "";
 
-    function sendMessage() {
-      const message = userInput.value.trim();
-      if (!message) return;
+    fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ message })
+    })
+    .then(res => res.json())
+    .then(data => addMessage(data.reply, "bot"))
+    .catch(() => addMessage("Server sedang bermasalah.", "bot"));
+  }
+</script>
 
-      addMessage(message, "user");
-      userInput.value = "";
-
-      const typing = document.createElement("div");
-      typing.className = "message bot";
-      typing.textContent = "Mengetik...";
-      chatMessages.appendChild(typing);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-
-      fetch("/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ message: message })
-      })
-      .then(res => res.json())
-      .then(data => {
-        chatMessages.removeChild(typing);
-        addMessage(data.reply, "bot");
-      })
-      .catch(() => {
-        chatMessages.removeChild(typing);
-        addMessage("Terjadi kesalahan. Coba lagi.", "bot");
-      });
-    }
-    
-  </script>
 
 </body>
 </html>
