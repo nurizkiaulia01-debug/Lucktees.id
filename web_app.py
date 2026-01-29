@@ -1,7 +1,8 @@
+import os
 from flask import Flask, render_template, request, jsonify
 from core import get_bot_reply
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="templates")
 
 @app.route("/")
 def index():
@@ -14,6 +15,5 @@ def chat():
     reply = get_bot_reply(user_message)
     return jsonify({"reply": reply})
 
-if __name__ == "__main__":
-    # debug=True supaya mudah melihat error saat pengembangan
-    app.run()
+# ❌ JANGAN pakai app.run() di Railway
+# Gunicorn yang akan menjalankan app
