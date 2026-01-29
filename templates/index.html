@@ -1,4 +1,134 @@
-<script>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucktees.id Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #4facfe, #cfe9ff); /* biru muda */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chat-container {
+      width: 100%;
+      max-width: 420px;
+      height: 90vh;
+      background: #eaf6ff; /* biru muda */
+      border-radius: 16px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* HEADER - BIRU */
+    .chat-header {
+      background: #1b83cd; /* biru tua */
+      color: #ffffff;
+      padding: 16px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background: #dff1ff; /* biru muda */
+    }
+
+    .message {
+      max-width: 75%;
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      border-radius: 14px;
+      font-size: 14px;
+      line-height: 1.4;
+      animation: fadeIn 0.3s ease;
+    }
+
+    /* PESAN USER */
+    .user {
+      background: #5dade2; /* biru */
+      color: #ffffff;
+      margin-left: auto;
+      border-bottom-right-radius: 4px;
+    }
+
+    /* PESAN BOT */
+    .bot {
+      background: #ffffff;
+      color: #333;
+      border: 1px solid #bcdffb;
+      margin-right: auto;
+      border-bottom-left-radius: 4px;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #bcdffb;
+      background: #eaf6ff;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px 12px;
+      border-radius: 20px;
+      border: 1px solid #9cccf5;
+      outline: none;
+    }
+
+    /* TOMBOL KIRIM - BIRU */
+    .chat-input button {
+      margin-left: 8px;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 20px;
+      background: #1e90ff; /* biru */
+      color: #ffffff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .chat-input button:hover {
+      background: #187bcd;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      🤖 Lucktees.id Assistant
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        Halo 👋 Selamat datang di Lucktees.id Ada yang bisa kami bantu?
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ketik pesan..." autocomplete="off">
+      <button onclick="sendMessage()">Kirim</button>
+    </div>
+  </div>
+
+  <script>
   const chatMessages = document.getElementById("chatMessages");
   const userInput = document.getElementById("userInput");
   const API_URL = window.location.origin + "/chat";
@@ -48,3 +178,8 @@
     }
   });
 </script>
+
+
+
+</body>
+</html>
